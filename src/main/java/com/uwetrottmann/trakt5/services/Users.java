@@ -100,6 +100,17 @@ public interface Users {
     );
 
     /**
+     * <b>OAuth Optional</b>
+     *
+     * <p> Returns one for a user.
+     */
+    @GET("users/{username}/lists/{id}")
+    Call<TraktList> list(
+            @Path("username") UserSlug userSlug,
+            @Path("id") String id
+    );
+
+    /**
      * <b>OAuth Required</b>
      *
      * <p> Create a new custom list. The name is the only required field, but the other info is recommended to ask for.
