@@ -1,3 +1,5 @@
+My fork of trakt-java to make some changes I needed for [couchmoney](https://couchmoney.tv).
+
 trakt-java
 ==========
 
