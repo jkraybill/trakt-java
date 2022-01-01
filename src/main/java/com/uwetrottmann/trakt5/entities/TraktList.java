@@ -1,16 +1,15 @@
 package com.uwetrottmann.trakt5.entities;
 
-import com.uwetrottmann.trakt5.enums.ListPrivacy;
 import com.uwetrottmann.trakt5.enums.SortBy;
 import com.uwetrottmann.trakt5.enums.SortHow;
 import org.threeten.bp.OffsetDateTime;
 
-public class TraktList {
+public class TraktList implements Comparable<TraktList> {
 
     public ListIds ids;
     public String name;
     public String description;
-    public ListPrivacy privacy;
+    public String privacy;
     public Boolean display_numbers;
     public Boolean allow_comments;
     public SortBy sort_by;
@@ -37,7 +36,7 @@ public class TraktList {
         return this;
     }
 
-    public TraktList privacy(ListPrivacy privacy) {
+    public TraktList privacy(String privacy) {
         this.privacy = privacy;
         return this;
     }
@@ -62,4 +61,8 @@ public class TraktList {
         return this;
     }
 
+	@Override
+	public int compareTo(TraktList o) {
+		return name.compareTo(o.name);
+	}
 }
