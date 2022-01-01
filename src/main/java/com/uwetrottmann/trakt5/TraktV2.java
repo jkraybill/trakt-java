@@ -37,6 +37,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.annotation.Annotation;
 import java.net.URLEncoder;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Helper class for easy usage of the trakt v2 API using retrofit.
@@ -198,6 +199,8 @@ public class TraktV2 {
     protected void setOkHttpClientDefaults(OkHttpClient.Builder builder) {
         builder.addInterceptor(new TraktV2Interceptor(this));
         builder.authenticator(new TraktV2Authenticator(this));
+        builder.readTimeout(120, TimeUnit.SECONDS);
+        builder.connectTimeout(120, TimeUnit.SECONDS);
     }
 
     /**
