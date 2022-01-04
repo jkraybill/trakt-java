@@ -7,6 +7,7 @@ import com.uwetrottmann.trakt5.entities.BaseShow;
 import com.uwetrottmann.trakt5.entities.LastActivities;
 import com.uwetrottmann.trakt5.entities.PlaybackResponse;
 import com.uwetrottmann.trakt5.entities.RatedEpisode;
+import com.uwetrottmann.trakt5.entities.RatedItem;
 import com.uwetrottmann.trakt5.entities.RatedMovie;
 import com.uwetrottmann.trakt5.entities.RatedSeason;
 import com.uwetrottmann.trakt5.entities.RatedShow;
@@ -157,8 +158,8 @@ public interface Sync {
 	 * @param limit  Number of results to return per page. If {@code null} but {@code page} is provided defaults to 10, otherwise all items are returned.
 	 */
 	@GET("sync/ratings/all{rating}")
-	Call<List<RatedMovie>> ratingsAll(@Path(value = "rating", encoded = true) RatingsFilter filter,
-			@Query(value = "extended", encoded = true) Extended extended, @Query("page") Integer page, @Query("limit") Integer limit);
+	Call<List<RatedItem>> ratingsAll(@Path(value = "rating", encoded = true) RatingsFilter filter, @Query(value = "extended", encoded = true) Extended extended,
+			@Query("page") Integer page, @Query("limit") Integer limit);
 
 	/**
 	 * <b>OAuth Required</b>

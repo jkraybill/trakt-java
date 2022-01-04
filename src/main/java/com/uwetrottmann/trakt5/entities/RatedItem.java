@@ -13,4 +13,9 @@ public class RatedItem extends BaseRatedEntity {
 	public Season season;
 	public Movie movie;
 
+	@Override
+	public String toString() {
+		return "RatedItem [type=" + type + ", show=" + show + ", episode=" + episode + ", season=" + season + ", movie=" + movie + "]";
+	}
+
 }

@@ -4,15 +4,20 @@ import org.threeten.bp.OffsetDateTime;
 
 public class Episode extends BaseEntity {
 
-    public Integer season;
-    public Integer number;
-    public EpisodeIds ids;
+	public Integer season;
+	public Integer number;
+	public EpisodeIds ids;
 
-    // extended info
-    public Integer number_abs;
-    public OffsetDateTime first_aired;
-    public Integer comment_count;
-    public Integer runtime;
-    
+	// extended info
+	public Integer number_abs;
+	public OffsetDateTime first_aired;
+	public Integer comment_count;
+	public Integer runtime;
+
+	@Override
+	public String toString() {
+		return "Episode [season=" + season + ", number=" + number + ", ids=" + ids + ", number_abs=" + number_abs + ", first_aired=" + first_aired
+				+ ", comment_count=" + comment_count + ", runtime=" + runtime + "]";
+	}
 
 }
