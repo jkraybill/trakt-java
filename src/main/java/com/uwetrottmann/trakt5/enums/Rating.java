@@ -1,31 +1,27 @@
 package com.uwetrottmann.trakt5.enums;
 
-public enum Rating implements TraktEnum {
+public class Rating {
 
-    WEAKSAUCE(1),
-    TERRIBLE(2),
-    BAD(3),
-    POOR(4),
-    MEH(5),
-    FAIR(6),
-    GOOD(7),
-    GREAT(8),
-    SUPERB(9),
-    TOTALLYNINJA(10);
+	public static final int WEAKSAUCE = 1;
+	public static final int TERRIBLE = 2;
+	public static final int BAD = 3;
+	public static final int POOR = 4;
+	public static final int MEH = 5;
+	public static final int FAIR = 6;
+	public static final int GOOD = 7;
+	public static final int GREAT = 8;
+	public static final int SUPERB = 9;
+	public static final int TOTALLYNINJA = 10;
 
-    public int value;
+	public int value;
 
-    Rating(int value) {
-        this.value = value;
-    }
+	public Rating(int value) {
+		this.value = value;
+	}
 
-    public static Rating fromValue(int value) {
-        return Rating.values()[value - 1];
-    }
-
-    @Override
-    public String toString() {
-        return String.valueOf(value);
-    }
+	@Override
+	public String toString() {
+		return String.valueOf(value);
+	}
 
 }

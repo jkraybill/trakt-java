@@ -17,7 +17,8 @@ public class Episode extends BaseEntity {
 	@Override
 	public String toString() {
 		return "Episode [season=" + season + ", number=" + number + ", ids=" + ids + ", number_abs=" + number_abs + ", first_aired=" + first_aired
-				+ ", comment_count=" + comment_count + ", runtime=" + runtime + "]";
+				+ ", comment_count=" + comment_count + ", runtime=" + runtime + ", title=" + title + ", overview=" + overview + ", rating=" + rating
+				+ ", votes=" + votes + ", updated_at=" + updated_at + ", available_translations=" + available_translations + "]";
 	}
 
 }

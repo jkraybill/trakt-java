@@ -23,7 +23,9 @@ public class Movie extends BaseEntity {
 	@Override
 	public String toString() {
 		return "Movie [year=" + year + ", ids=" + ids + ", certification=" + certification + ", tagline=" + tagline + ", released=" + released + ", runtime="
-				+ runtime + ", trailer=" + trailer + ", homepage=" + homepage + ", language=" + language + ", genres=" + genres + "]";
+				+ runtime + ", trailer=" + trailer + ", homepage=" + homepage + ", language=" + language + ", genres=" + genres + ", title=" + title
+				+ ", overview=" + overview + ", rating=" + rating + ", votes=" + votes + ", updated_at=" + updated_at + ", available_translations="
+				+ available_translations + "]";
 	}
 
 }

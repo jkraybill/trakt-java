@@ -28,7 +28,8 @@ public class Show extends BaseEntity {
 	public String toString() {
 		return "Show [year=" + year + ", ids=" + ids + ", first_aired=" + first_aired + ", airs=" + airs + ", runtime=" + runtime + ", certification="
 				+ certification + ", network=" + network + ", country=" + country + ", trailer=" + trailer + ", homepage=" + homepage + ", status=" + status
-				+ ", language=" + language + ", genres=" + genres + "]";
+				+ ", language=" + language + ", genres=" + genres + ", title=" + title + ", overview=" + overview + ", rating=" + rating + ", votes=" + votes
+				+ ", updated_at=" + updated_at + ", available_translations=" + available_translations + "]";
 	}
 
 }
