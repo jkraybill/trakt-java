@@ -66,4 +66,12 @@ public class TraktList implements Comparable<TraktList> {
 	public int compareTo(TraktList o) {
 		return name.toLowerCase().compareTo(o.name.toLowerCase());
 	}
+
+	@Override
+	public String toString() {
+		return "TraktList [ids=" + ids + ", name=" + name + ", privacy=" + privacy + ", display_numbers=" + display_numbers
+				+ ", allow_comments=" + allow_comments + ", sort_by=" + sort_by + ", sort_how=" + sort_how + ", created_at=" + created_at + ", updated_at="
+				+ updated_at + ", item_count=" + item_count + ", comment_count=" + comment_count + ", likes=" + likes + ", user=" + user + "]";
+	}
+
 }

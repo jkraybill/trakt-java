@@ -22,6 +22,7 @@ import com.uwetrottmann.trakt5.entities.Settings;
 import com.uwetrottmann.trakt5.entities.SyncItems;
 import com.uwetrottmann.trakt5.entities.SyncResponse;
 import com.uwetrottmann.trakt5.entities.TraktList;
+import com.uwetrottmann.trakt5.entities.TraktListPopularity;
 import com.uwetrottmann.trakt5.entities.User;
 import com.uwetrottmann.trakt5.entities.UserSlug;
 import com.uwetrottmann.trakt5.entities.WatchlistedEpisode;
@@ -91,6 +92,15 @@ public interface Users {
 	 */
 	@GET("users/{username}/lists")
 	Call<List<TraktList>> lists(@Path("username") UserSlug userSlug);
+
+	/**
+	 * <b>OAuth Optional</b>
+	 *
+	 * <p>
+	 * Returns all popular lists.
+	 */
+	@GET("lists/popular")
+	Call<List<TraktListPopularity>> popularLists(@Query("page") Integer page, @Query("limit") Integer limit);
 
 	/**
 	 * <b>OAuth Optional</b>
